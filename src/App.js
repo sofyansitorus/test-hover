@@ -1,16 +1,16 @@
-import {useState} from 'react';
+import React, { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  const [hovered, setHovered] = useState('unhovered');
+  const [hovered, setHovered] = useState("unhovered");
 
   const onMouseEnter = () => {
-    setHovered('hovered');
-  }
+    setHovered("hovered");
+  };
 
   const onMouseLeave = () => {
-    setHovered('unhovered');
-  }
+    setHovered("unhovered");
+  };
 
   return (
     <div className="App">
@@ -20,12 +20,12 @@ export default function App() {
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         style={{
-          width: '100%',
-          padding: '50px',
-          backgroundColor: 'yellow',
+          width: "100%",
+          padding: "50px",
+          backgroundColor: "yellow"
         }}
       >
-      {hovered}
+        {hovered}
       </div>
     </div>
   );
